@@ -1,0 +1,30 @@
+footer {
+    margin-top: 64px;
+    padding: 20px 20px 30px;
+
+    color: #fff;
+    background-color: $color-grey;
+
+    &>a {
+        @include font-family-heading;
+        font-size: 18px;
+    }
+
+    ul {
+        margin: 16px 0 0;
+        list-style: none;
+        padding-left: 0;
+    }
+
+    li {
+        font-weight: 500;
+        margin: 5px;
+    }
+
+    i {
+        margin-right: 10px;
+
+        width: 13px;
+        font-size: 13px;
+    }
+}

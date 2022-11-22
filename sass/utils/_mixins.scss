@@ -1,0 +1,13 @@
+@mixin font-family-heading {
+    font-family: 'Shrikhand', cursive;
+}
+
+@mixin font-family-text {
+    font-family: 'Roboto', cursive;
+}
+
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

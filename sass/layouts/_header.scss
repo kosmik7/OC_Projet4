@@ -1,0 +1,13 @@
+header {
+    @include flex-center;
+    height: 63px;
+
+    @include font-family-heading;
+    font-size: 30px;
+
+    background-color: #fff;
+    /* requis pour que box-shadow soit au dessus */
+    position: relative;
+    z-index: 10;
+    box-shadow: 0px 2px 4px 0px #00000026;
+}

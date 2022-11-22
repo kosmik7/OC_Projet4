@@ -1,0 +1,166 @@
+// location
+.location-container {
+    @include flex-center;
+    gap: 16px;
+    height: 50px;
+
+    font-weight: 500;
+    color: $color-grey;
+    background-color: $color-grey-2;
+
+    p {
+        padding-right: 20px;
+    }
+}
+
+
+// explore
+.explore-container {
+    margin: 40px auto;
+    padding: 0 20px;
+    text-align: center;
+
+    h1 {
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+    p {
+        font-size: 18px;
+        margin-bottom: 28px;
+    }
+}
+
+
+// how-to
+.howto-container {
+    padding: 28px 20px 44px;
+    background-color: #fff;
+}
+
+.howto-step {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    height: 72px;
+    margin: 25px 0 25px 12px;
+
+    border-radius: 20px;
+    font-weight: 500;
+    background-color: $color-background;
+    box-shadow: 0px 4px 15px 0px #00000026;
+
+    &__number {
+        @include flex-center;
+        width: 24px;
+        height: 24px;
+        margin-left: -12px;
+        border-radius: 50%;
+
+        font-size: 14px;
+        font-weight: 500;
+        color: #fff;
+        background-color: $color-primary;
+    }
+
+    &__ico {
+        width: 18px;
+        font-size: 18px;
+        text-align: center;
+
+        color: $color-grey-3;
+    }
+
+    &:hover {
+        background-color: $color-primary-2;
+    }
+
+    &:hover &__ico {
+        color: $color-primary;
+    }
+}
+
+
+// restaurants
+.restaurants-container {
+    margin: 48px auto;
+    padding: 0 20px;
+}
+
+.restaurants-card {
+    display: grid;
+    grid:
+        "a a" 174px "b c" 1fr / 1fr max-content;
+    align-items: center;
+    margin-top: 18px;
+
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0px 4px 15px 0px #0000001A;
+
+    &:first-of-type {
+        margin-top: 25px;
+    }
+
+    img {
+        grid-area: a;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    &__new {
+        grid-area: a;
+        place-self: start end;
+        margin: 13px;
+        padding: 8px 13px;
+
+        border-radius: 2px;
+        font-size: 14px;
+        font-weight: 500;
+        color: $color-green-2;
+        background-color: $color-green;
+        box-shadow: 0px 2px 4px 0px #00000026;
+    }
+
+    &__text {
+        grid-area: b;
+        padding: 16px 14px;
+
+        font-size: 17px;
+        font-weight: 300;
+
+        p {
+            margin: 4px 0;
+        }
+
+        p:first-child {
+            font-size: 18px;
+            font-weight: 700;
+        }
+    }
+
+    &__like {
+        grid-area: c;
+        padding: 12px 24px;
+        font-size: 21px;
+
+        &--filled.fa-solid {
+            display: none;
+            background: $gradient-btn;
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        &:hover {
+            .restaurants-card__like--stroke {
+                display: none;
+            }
+
+            .restaurants-card__like--filled {
+                display: block;
+            }
+        }
+    }
+}

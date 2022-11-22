@@ -1,0 +1,256 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+img,
+picture {
+  display: block;
+  max-width: 100%;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  background-color: #F6F6F6;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: inline-flex;
+  position: relative;
+  height: 50px;
+  border-radius: 25px;
+  padding: 0 18px;
+  font-weight: 500;
+  color: #fff;
+  background: linear-gradient(#FF79DA, #9356DC);
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.2509803922);
+}
+
+.btn::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  opacity: 0;
+}
+
+.btn:hover::after {
+  opacity: 0.15;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 63px;
+  font-family: "Shrikhand", cursive;
+  font-size: 30px;
+  background-color: #fff;
+  /* requis pour que box-shadow soit au dessus */
+  position: relative;
+  z-index: 10;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1490196078);
+}
+
+footer {
+  margin-top: 64px;
+  padding: 20px 20px 30px;
+  color: #fff;
+  background-color: #353535;
+}
+
+footer > a {
+  font-family: "Shrikhand", cursive;
+  font-size: 18px;
+}
+
+footer ul {
+  margin: 16px 0 0;
+  list-style: none;
+  padding-left: 0;
+}
+
+footer li {
+  font-weight: 500;
+  margin: 5px;
+}
+
+footer i {
+  margin-right: 10px;
+  width: 13px;
+  font-size: 13px;
+}
+
+.location-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  height: 50px;
+  font-weight: 500;
+  color: #353535;
+  background-color: #EAEAEA;
+}
+
+.location-container p {
+  padding-right: 20px;
+}
+
+.explore-container {
+  margin: 40px auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.explore-container h1 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.explore-container p {
+  font-size: 18px;
+  margin-bottom: 28px;
+}
+
+.howto-container {
+  padding: 28px 20px 44px;
+  background-color: #fff;
+}
+
+.howto-step {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  height: 72px;
+  margin: 25px 0 25px 12px;
+  border-radius: 20px;
+  font-weight: 500;
+  background-color: #F6F6F6;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1490196078);
+}
+
+.howto-step__number {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  margin-left: -12px;
+  border-radius: 50%;
+  font-size: 14px;
+  font-weight: 500;
+  color: #fff;
+  background-color: #9356DC;
+}
+
+.howto-step__ico {
+  width: 18px;
+  font-size: 18px;
+  text-align: center;
+  color: #7E7E7E;
+}
+
+.howto-step:hover {
+  background-color: #F5EDFF;
+}
+
+.howto-step:hover .howto-step__ico {
+  color: #9356DC;
+}
+
+.restaurants-container {
+  margin: 48px auto;
+  padding: 0 20px;
+}
+
+.restaurants-card {
+  display: grid;
+  grid: "a a" 174px "b c" 1fr/1fr max-content;
+  align-items: center;
+  margin-top: 18px;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1019607843);
+}
+
+.restaurants-card:first-of-type {
+  margin-top: 25px;
+}
+
+.restaurants-card img {
+  grid-area: a;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.restaurants-card__new {
+  grid-area: a;
+  place-self: start end;
+  margin: 13px;
+  padding: 8px 13px;
+  border-radius: 2px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #008766;
+  background-color: #99E2D0;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1490196078);
+}
+
+.restaurants-card__text {
+  grid-area: b;
+  padding: 16px 14px;
+  font-size: 17px;
+  font-weight: 300;
+}
+
+.restaurants-card__text p {
+  margin: 4px 0;
+}
+
+.restaurants-card__text p:first-child {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.restaurants-card__like {
+  grid-area: c;
+  padding: 12px 24px;
+  font-size: 21px;
+}
+
+.restaurants-card__like--filled.fa-solid {
+  display: none;
+  background: linear-gradient(#FF79DA, #9356DC);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.restaurants-card__like:hover .restaurants-card__like--stroke {
+  display: none;
+}
+
+.restaurants-card__like:hover .restaurants-card__like--filled {
+  display: block;
+}
+
+/*# sourceMappingURL=style.css.map */

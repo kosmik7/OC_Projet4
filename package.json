@@ -1,0 +1,21 @@
+{
+  "name": "oc_projet_4",
+  "version": "1.0.0",
+  "description": "Ce dépot contient le code du projet 4 de ma formation d'Intégrateur Web.",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:./assets/style.css",
+    "prefix": "postcss ./assets/style.css --use autoprefixer"
+  },
+  "browserslist": "last 4 versions",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kosmik7/OC_Projet4.git"
+  },
+  "author": "JP Brunache",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kosmik7/OC_Projet4/issues"
+  },
+  "homepage": "https://github.com/kosmik7/OC_Projet4#readme"
+}
