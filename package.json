@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "sass": "sass --watch ./sass/main.scss:./assets/style.css",
-    "prefix": "postcss ./assets/style.css --use autoprefixer"
+    "prefix": "postcss ./assets/style.css --use autoprefixer -o ./assets/style.css"
   },
   "browserslist": "last 4 versions",
   "repository": {
