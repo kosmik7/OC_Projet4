@@ -1,0 +1,56 @@
+// spinner
+$spinner-duration: 2s;
+
+@keyframes spinner {
+    0% {
+        transform: rotate(0turn);
+    }
+
+    100% {
+        transform: rotate(1turn);
+    }
+}
+
+@keyframes hide-spinner {
+    0% {
+        opacity: 1;
+    }
+
+    99% {
+        opacity: 0;
+        transform: scale(1); // cache le block avec 'transform'
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(0); // cache le block avec 'transform'
+    }
+}
+
+.spinner {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    background: $color-background;
+
+    &::after {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        margin: auto;
+        width: 8rem;
+        height: 8rem;
+        border-radius: 50%;
+        border: 0.8rem solid $color-grey-2;
+        border-top-color: $color-primary;
+        animation: spinner 1s ease-in-out 5;
+    }
+
+    & {
+        animation: hide-spinner 0.35s $spinner-duration forwards;
+    }
+}
