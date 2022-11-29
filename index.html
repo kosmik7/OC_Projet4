@@ -21,95 +21,109 @@
     </header>
 
     <main>
-        <div class="location-container">
+        <div class="container container--location">
             <i class="fa-solid fa-location-dot"></i>
             <p>Paris, Belleville</p>
         </div>
 
-        <section class="explore-container">
-            <h1>Réservez le menu qui vous convient</h1>
-            <p>Découvrez des restaurants d’exception, sélectionnés par nos soins.</p>
-            <a href="#" class="btn">Explorer nos restaurants</a>
-        </section>
-
-        <section class="howto-container">
-            <h2>Fonctionnement</h2>
-            <div class="howto-step">
-                <p class="howto-step__number">1</p>
-                <i class="howto-step__ico fa-solid fa-mobile-screen-button"></i>
-                <p>Choisissez un restaurant</p>
-            </div>
-            <div class="howto-step">
-                <p class="howto-step__number">2</p>
-                <i class="howto-step__ico fa-solid fa-list-ul"></i>
-                <p>Composez votre menu</p>
-            </div>
-            <div class="howto-step">
-                <p class="howto-step__number">3</p>
-                <i class="howto-step__ico fa-solid fa-store"></i>
-                <p>Dégustez au restaurant</p>
+        <section class="container container--explore">
+            <div class="container__item">
+                <h1>Réservez le menu qui vous convient</h1>
+                <p>Découvrez des restaurants d’exception, sélectionnés par nos soins.</p>
+                <a href="#" class="btn">Explorer nos restaurants</a>
             </div>
         </section>
 
-        <section class="restaurants-container">
-            <h2>Restaurants</h2>
-            <div class="restaurants-card">
-                <img src="./restaurants/src/la_palette_du_gout.jpg" alt="Photo d'un plat">
-                <p class="restaurants-card__new">Nouveau</p>
-                <div class="restaurants-card__text">
-                    <p>La palette du goût</p>
-                    <p>Ménilmontant</p>
-                </div>
-                <div class="restaurants-card__like">
-                    <i class="restaurants-card__like--stroke fa-regular fa-heart"></i>
-                    <i class="restaurants-card__like--filled fa-solid fa-heart"></i>
-                </div>
-            </div>
-            <div class="restaurants-card">
-                <img src="./restaurants/src/la_note_enchantee.jpg" alt="Photo d'un plat">
-                <p class="restaurants-card__new">Nouveau</p>
-                <div class="restaurants-card__text">
-                    <p>La note enchantée</p>
-                    <p>Charonne</p>
-                </div>
-                <div class="restaurants-card__like">
-                    <i class="restaurants-card__like--stroke fa-regular fa-heart"></i>
-                    <i class="restaurants-card__like--filled fa-solid fa-heart"></i>
+        <section class="container container--howto">
+            <div class="container__item">
+                <h2>Fonctionnement</h2>
+                <div class="flex flex--howto">
+                    <div class="howto-step">
+                        <p class="howto-step__number">1</p>
+                        <i class="howto-step__ico fa-solid fa-mobile-screen-button"></i>
+                        <p>Choisissez un restaurant</p>
+                    </div>
+                    <div class="howto-step">
+                        <p class="howto-step__number">2</p>
+                        <i class="howto-step__ico fa-solid fa-list-ul"></i>
+                        <p>Composez votre menu</p>
+                    </div>
+                    <div class="howto-step">
+                        <p class="howto-step__number">3</p>
+                        <i class="howto-step__ico fa-solid fa-store"></i>
+                        <p>Dégustez au restaurant</p>
+                    </div>
                 </div>
             </div>
-            <div class="restaurants-card">
-                <img src="./restaurants/src/a_la_francaise.jpg" alt="Photo d'un plat">
-                <div class="restaurants-card__text">
-                    <p>À la française</p>
-                    <p>Cité Rouge</p>
-                </div>
-                <div class="restaurants-card__like">
-                    <i class="restaurants-card__like--stroke fa-regular fa-heart"></i>
-                    <i class="restaurants-card__like--filled fa-solid fa-heart"></i>
-                </div>
-            </div>
-            <div class="restaurants-card">
-                <img src="./restaurants/src/le_delice_des_sens.jpg" alt="Photo d'un plat">
-                <div class="restaurants-card__text">
-                    <p>Le délice des sens</p>
-                    <p>Folie-Méricourt</p>
-                </div>
-                <div class="restaurants-card__like">
-                    <i class="restaurants-card__like--stroke fa-regular fa-heart"></i>
-                    <i class="restaurants-card__like--filled fa-solid fa-heart"></i>
+        </section>
+
+        <section class="container container--restaurants">
+            <div class="container__item">
+                <h2>Restaurants</h2>
+                <div class="grid grid--restaurants">
+                    <div class="wrapper">
+                        <div class="restaurants-card">
+                            <img src="./restaurants/src/la_palette_du_gout.jpg" alt="Photo d'un plat">
+                            <p class="restaurants-card__new">Nouveau</p>
+                            <div class="restaurants-card__text">
+                                <p>La palette du goût</p>
+                                <p>Ménilmontant</p>
+                            </div>
+                            <div class="restaurants-card__like">
+                                <i class="restaurants-card__like--stroke fa-regular fa-heart"></i>
+                                <i class="restaurants-card__like--filled fa-solid fa-heart"></i>
+                            </div>
+                        </div>
+                        <div class="restaurants-card">
+                            <img src="./restaurants/src/la_note_enchantee.jpg" alt="Photo d'un plat">
+                            <p class="restaurants-card__new">Nouveau</p>
+                            <div class="restaurants-card__text">
+                                <p>La note enchantée</p>
+                                <p>Charonne</p>
+                            </div>
+                            <div class="restaurants-card__like">
+                                <i class="restaurants-card__like--stroke fa-regular fa-heart"></i>
+                                <i class="restaurants-card__like--filled fa-solid fa-heart"></i>
+                            </div>
+                        </div>
+                        <div class="restaurants-card">
+                            <img src="./restaurants/src/a_la_francaise.jpg" alt="Photo d'un plat">
+                            <div class="restaurants-card__text">
+                                <p>À la française</p>
+                                <p>Cité Rouge</p>
+                            </div>
+                            <div class="restaurants-card__like">
+                                <i class="restaurants-card__like--stroke fa-regular fa-heart"></i>
+                                <i class="restaurants-card__like--filled fa-solid fa-heart"></i>
+                            </div>
+                        </div>
+                        <div class="restaurants-card">
+                            <img src="./restaurants/src/le_delice_des_sens.jpg" alt="Photo d'un plat">
+                            <div class="restaurants-card__text">
+                                <p>Le délice des sens</p>
+                                <p>Folie-Méricourt</p>
+                            </div>
+                            <div class="restaurants-card__like">
+                                <i class="restaurants-card__like--stroke fa-regular fa-heart"></i>
+                                <i class="restaurants-card__like--filled fa-solid fa-heart"></i>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer>
-        <a href="#">ohmyfood</a>
-        <ul>
-            <li><a href="#"><i class="fa-solid fa-utensils"></i>Proposer un restaurant</a></li>
-            <li><a href="#"><i class="fa-solid fa-handshake-angle"></i>Devenir partenaire</a></li>
-            <li><a href="#">Mentions légales</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
+    <footer class="footer container container--footer">
+        <div class="container__item">
+            <a class="footer__header" href="#">ohmyfood</a>
+            <ul class="footer__nav">
+                <li><a href="#"><i class="fa-solid fa-utensils"></i>Proposer un restaurant</a></li>
+                <li><a href="#"><i class="fa-solid fa-handshake-angle"></i>Devenir partenaire</a></li>
+                <li><a href="#">Mentions légales</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
     </footer>
 </body>
 

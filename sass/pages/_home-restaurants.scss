@@ -1,90 +1,64 @@
-// location
-.location-container {
-    @include flex-center;
-    gap: 16px;
-    height: 50px;
-
-    font-weight: 500;
-    color: $color-grey;
-    background-color: $color-grey-2;
-
-    p {
-        padding-right: 20px;
-    }
-}
-
-
-// explore
-.explore-container {
-    margin: 40px auto;
-    padding: 0 20px;
-    text-align: center;
-
-    h1 {
-        font-size: 24px;
-        font-weight: bold;
-    }
-
-    p {
-        font-size: 18px;
-        margin-bottom: 28px;
-    }
-}
-
-
-// how-to
-.howto-container {
-    padding: 28px 20px 44px;
-    background-color: #fff;
-}
-
-.howto-step {
-    display: flex;
-    align-items: center;
-    gap: 22px;
-    height: 72px;
-    margin: 25px 0 25px 12px;
-
-    border-radius: 20px;
-    font-weight: 500;
-    background-color: $color-background;
-    box-shadow: 0px 4px 15px 0px #00000026;
-
-    &__number {
-        @include flex-center;
-        width: 24px;
-        height: 24px;
-        margin-left: -12px;
-        border-radius: 50%;
-
-        font-size: 14px;
-        font-weight: 500;
-        color: #fff;
-        background-color: $color-primary;
-    }
-
-    &__ico {
-        width: 18px;
-        font-size: 18px;
-        text-align: center;
-
-        color: $color-grey-3;
-    }
-
-    &:hover {
-        background-color: $color-primary-2;
-    }
-
-    &:hover &__ico {
-        color: $color-primary;
-    }
-}
-
-
-// restaurants
-.restaurants-container {
+.container--restaurants {
     margin: 48px auto;
-    padding: 0 20px;
+
+    @include media-tablet {
+        padding: 0;
+    }
+
+    .container__item {
+        @include media-tablet {
+            max-width: none;
+
+            display: grid;
+            grid-template-columns:
+                [full-start] 1fr [content-start] 768px [content-end] 1fr [full-end]; // full-bleed layout
+
+            &>* {
+                grid-column: content;
+            }
+        }
+
+        @include media-desktop {
+            grid-template-columns:
+                [full-start] 1fr [content-start] 1060px [content-end] 1fr [full-end]; // full-bleed layout
+
+        }
+    }
+
+    @include media-tablet {
+        .grid--restaurants {
+            grid-column: full;
+            grid-template-columns: inherit;
+            padding-bottom: 20px;
+            overflow-x: scroll;
+            scrollbar-width: none;
+
+            display: grid;
+
+            &::-webkit-scrollbar {
+                display: none;
+            }
+        }
+    }
+
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+
+        @include media-tablet {
+            grid-column: content;
+
+            flex-direction: row;
+            gap: 32px;
+
+            &::after {
+                content: "";
+                align-self: stretch;
+                padding-inline-end: 32px; // gap a droite
+            }
+        }
+    }
 }
 
 .restaurants-card {
@@ -92,14 +66,13 @@
     grid:
         "a a" 174px "b c" 1fr / 1fr max-content;
     align-items: center;
-    margin-top: 18px;
 
     border-radius: 15px;
     overflow: hidden;
     box-shadow: 0px 4px 15px 0px #0000001A;
 
-    &:first-of-type {
-        margin-top: 25px;
+    @include media-tablet {
+        min-width: 335px;
     }
 
     img {

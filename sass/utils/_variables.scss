@@ -9,3 +9,9 @@ $color-grey: #353535;
 $color-grey-2: #EAEAEA;
 $color-grey-3: #7E7E7E;
 $gradient-btn: linear-gradient(#FF79DA, $color-primary);
+
+// pos
+$breakpoints: (
+    tablet: 940px,
+    desktop: 1200px,
+);

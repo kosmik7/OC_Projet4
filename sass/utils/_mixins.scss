@@ -1,3 +1,17 @@
+// media-queries
+@mixin media-tablet {
+    @media screen and (min-width: map-get($breakpoints, tablet)) {
+        @content;
+    }
+}
+
+@mixin media-desktop {
+    @media screen and (min-width: map-get($breakpoints, desktop)) {
+        @content;
+    }
+}
+
+// fonts
 @mixin font-family-heading {
     font-family: 'Shrikhand', cursive;
 }
@@ -6,6 +20,7 @@
     font-family: 'Roboto', cursive;
 }
 
+// pos
 @mixin flex-center {
     display: flex;
     justify-content: center;
