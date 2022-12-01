@@ -115,44 +115,6 @@
 
     &__like {
         grid-area: c;
-
-        position: relative; // pour placer les icones avec position absolute
-        width: 21px;
-        height: 21px;
         margin: 0 24px 0 0;
-        font-size: 21px;
-
-        &--stroke,
-        &--filled {
-            position: absolute; // superposition (display: casse les anims)
-            top: 0;
-            left: 0;
-
-            transition-duration: 250ms;
-        }
-
-        &--stroke {
-            opacity: 1;
-            transition-property: opacity;
-        }
-
-        &--filled {
-            background: $gradient-btn;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-
-            transform: scale(0);
-            transition-property: transform;
-        }
-
-        &:hover {
-            .restaurants-card__like--stroke {
-                opacity: 0;
-            }
-
-            .restaurants-card__like--filled {
-                transform: scale(1);
-            }
-        }
     }
 }
