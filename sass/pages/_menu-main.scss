@@ -1,3 +1,33 @@
+@keyframes slide-in {
+    0% {
+        opacity: 0;
+        transform: translateX(300px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+@mixin animation-delay($count) {
+    // $count correspond a l'ordre des sections du menu
+    $loop: 5; // nombre de plats par section
+    $animation-delay: $count * $loop * 100ms;
+
+    h2 {
+        animation-delay: $animation-delay
+    }
+
+    .menu-card {
+        @for $i from 1 through $loop {
+            &:nth-child(#{$i}) {
+                animation-delay: $animation-delay + 100ms * $i;
+            }
+        }
+    }
+}
+
 .menu {
     .btn--order {
         text-align: center;
@@ -24,6 +54,23 @@
             margin-top: 5px;
             border-bottom: solid 3px $color-green;
         }
+    }
+
+    h2,
+    .menu-card {
+        animation: slide-in .6s ease-in-out both;
+    }
+
+    &--1 {
+        @include animation-delay(0);
+    }
+
+    &--2 {
+        @include animation-delay(1);
+    }
+
+    &--3 {
+        @include animation-delay(2);
     }
 }
 
