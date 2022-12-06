@@ -1,5 +1,6 @@
 .container--restaurants {
-    margin: 48px auto;
+    margin: 48px auto 64px;
+    
 
     @include media-tablet {
         padding: 0;
