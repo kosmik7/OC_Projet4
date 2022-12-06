@@ -75,26 +75,17 @@
     padding: 0 13px;
     background: $color-background;
     border-radius: 40px 40px 0 0;
+    overflow: hidden; // corrige animations hors du cadre 
 
     .menu-header,
     .menu-group {
         max-width: 480px;
-    }
 
-    @include media-tablet {
-        max-width: 768px;
-
-        .menu-header,
-        .menu-group {
+        @include media-tablet {
             max-width: 540px;
         }
-    }
 
-    @include media-desktop {
-        max-width: 1060px;
-
-        .menu-header,
-        .menu-group {
+        @include media-desktop {
             max-width: 640px;
         }
     }
