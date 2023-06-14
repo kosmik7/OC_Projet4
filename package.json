@@ -17,5 +17,11 @@
   "bugs": {
     "url": "https://github.com/kosmik7/OC_Projet4/issues"
   },
-  "homepage": "https://github.com/kosmik7/OC_Projet4#readme"
+  "homepage": "https://github.com/kosmik7/OC_Projet4#readme",
+  "devDependencies": {
+    "autoprefixer": "^10.4.14",
+    "postcss": "^8.4.24",
+    "postcss-cli": "^10.1.0",
+    "sass": "^1.63.4"
+  }
 }
